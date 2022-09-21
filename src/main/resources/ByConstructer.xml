@@ -7,13 +7,14 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="student" class="application.Student">
-        <property name="roll" value="123"/>
-        <property name="name" value="Anuj Sundriyal"/>
-    </bean>
-    <bean id="employee" class="application.Employee">
-        <property name="eid" value="123"/>
-        <property name="name" value="Akash Rawat"/>
+
+    <bean id="address" class="autowire.StudentAddress" autowire="default">
+        <property name="area" value="Mumbai"/>
+        <property name="city" value="Pune"/>
     </bean>
 
+    <bean id="student" class="autowire.ApplicationForStudent" autowire="constructor">
+        <property name="roll" value="776"/>
+        <property name="name" value="Rejul Sundriyal"/>
+    </bean>
 </beans>

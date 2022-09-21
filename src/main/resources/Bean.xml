@@ -6,14 +6,19 @@
    http://www.springframework.org/schema/beans/spring-beans.xsd
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config></context:annotation-config>
 
-    <bean id="student" class="application.Student">
-        <property name="roll" value="123"/>
-        <property name="name" value="Anuj Sundriyal"/>
+    <bean id="student" class="Autowired.StudentRecord">
+        <property name="studentId" value="1012"/>
+        <property name="studentName" value="Anuj Ji"/>
     </bean>
-    <bean id="employee" class="application.Employee">
-        <property name="eid" value="123"/>
-        <property name="name" value="Akash Rawat"/>
+
+    <bean id="address" class="Autowired.StudentAddress">
+        <property name="area" value="Vimaan Nagar"/>
+        <property name="city" value="Pune"/>
     </bean>
+
+
+
 
 </beans>

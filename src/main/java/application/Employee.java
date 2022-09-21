@@ -3,15 +3,15 @@ package application;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
+    int eid;
+    String name;
 
-    private int id;
-    private String name;
-    public int getId() {
-        return id;
+    public int getEid() {
+        return eid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEid(int eid) {
+        this.eid = eid;
     }
 
     public String getName() {
@@ -22,13 +22,11 @@ public class Employee {
         this.name = name;
     }
 
-    public Employee(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-    public Employee(){}
-    public String toString()
-    {
-        return "[ id: "+id+" Name : "+name+" ]";
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "eid=" + eid +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
